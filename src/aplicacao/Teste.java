@@ -68,11 +68,14 @@ public class Teste {
 					System.out.print("Digite o patrocinador do filme: ");
 					String patrocinadora = sc.nextLine();
 					System.out.println();
+		
 
 
 					Filme filmes = new Filme(nome, categoria, personagensPrincipais, faixaEtaria, classificacao,
 							notaClassificacao, duracao, produtora, patrocinadora);
 					
+					System.out.print("De acordo com a nota do filme ele é classificado como: ");
+					filmes.classificarPrograma(notaClassificacao);
 					filme.add(filmes);
 				}
 			break;
@@ -108,6 +111,9 @@ public class Teste {
 					Serie series = new Serie(nome, categoria, personagensPrincipais, faixaEtaria, classificacao,
 							notaClassificacao, duracao, numTemporadas, qntEpisodioPorTemporada);
 					
+					System.out.print("De acordo com a nota da série ela é classificado como: ");
+					series.classificarPrograma(notaClassificacao);
+					
 					serie.add(series);
 				}
 				break;
@@ -141,6 +147,9 @@ public class Teste {
 
 					Documentario documentarios = new Documentario(nome, categoria, personagensPrincipais, faixaEtaria,
 							classificacao, notaClassificacao, duracao, narrador);
+					
+					System.out.print("De acordo com a nota do documentario ele é classificado como: ");
+					documentarios.classificarPrograma(notaClassificacao);
 					
 					documentario.add(documentarios);
 				}
